@@ -1,5 +1,5 @@
 ## Proxy Scan Cloudflare ISP
-<img src="https://github.com/user-attachments/assets/f37cee2b-b8a4-40c3-9366-8ddb46301a36" width="500">
+<img src="https://github.com/user-attachments/assets/9445b330-3230-4566-b904-a6fa1eaa2db7" width="500">
 
 
 ### Deskripsi
