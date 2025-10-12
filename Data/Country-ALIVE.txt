@@ -1,3 +1,263 @@
+149.129.250.8,443,ID,21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia
+203.194.112.119,2053,ID,CV Rumahweb Indonesia
+203.194.112.119,8443,ID,CV Rumahweb Indonesia
+156.244.1.250,8443,ID,Lightnode Limited
+43.218.77.16,443,ID,Amazoncom Inc
+103.6.207.108,8080,ID,PT Pusat Media Indonesia
+36.95.152.58,12137,ID,PT Telekomunikasi Indonesia
+43.218.77.16,1443,ID,Amazoncom Inc
+47.250.139.59,443,MY,Alibaba Cloud LLC
+20.17.104.31,443,MY,Microsoft Corporation
+47.250.37.87,443,MY,Alibaba Cloud  MY
+47.254.255.125,443,MY,Alibaba Cloud  MY
+47.254.206.121,443,MY,Alibaba Cloud  MY
+58.27.117.24,443,MY,TMNET
+38.60.193.247,13300,MY,Kaopu Cloud HK Limited
+47.250.59.132,443,MY,Alibaba Cloud  MY
+47.250.139.249,443,MY,Alibaba Cloud LLC
+47.250.132.147,443,MY,Alibaba Cloud LLC
+155.254.60.225,443,MY,Evoxt Enterprise
+47.254.235.252,443,MY,Alibaba Cloud  MY
+167.99.73.22,443,SG,DigitalOcean LLC
+8.219.59.132,48964,SG,Alibaba Cloud Singapore Private Limited
+51.79.158.58,2053,SG,OVH Singapore PTE LTD
+43.156.107.236,12131,SG,6 COLLYER QUAY
+13.250.131.37,443,SG,Amazon Data Services Singapore
+91.192.81.154,2053,SG,Melbikomas UAB
+8.219.126.137,491,SG,Alibaba Cloud Singapore Private Limited
+43.134.167.135,9950,SG,6 COLLYER QUAY
+8.219.59.132,48130,SG,Alibaba Cloud Singapore Private Limited
+47.236.119.190,51342,SG,Alibaba Cloud LLC
+47.74.254.191,8900,SG,Alibaba Cloud  SG
+194.36.179.5,2053,SG,FIRST SERVER LIMITED
+143.198.92.220,443,SG,DigitalOcean LLC
+143.198.196.196,8443,SG,DigitalOcean LLC
+213.35.100.31,47112,SG,Oracle Svenska AB
+213.35.108.135,12596,SG,Oracle Svenska AB
+158.178.243.152,61731,SG,Oracle Corporation
+43.156.116.194,443,SG,6 COLLYER QUAY
+164.52.2.100,443,SG,UCULSG
+83.142.30.4,2096,SG,Zappie Host LLC
+54.255.217.120,8192,SG,Amazon Data Services Japan
+158.178.236.14,61731,SG,Oracle Corporation
+146.235.19.79,28983,SG,Oracle Corporation
+128.199.134.152,443,SG,DigitalOcean LLC
+43.128.95.110,40029,SG,6 COLLYER QUAY
+45.76.179.81,443,SG,Vultr Holdings LLC
+164.52.2.99,443,SG,UCULSG
+168.138.171.70,23280,SG,Oracle Public Cloud
+213.35.107.73,443,SG,Oracle Svenska AB
+168.138.181.188,61731,SG,Oracle Public Cloud
+185.81.28.95,30503,SG,AKILE LTD
+160.22.79.179,443,SG,Onidel Pty Ltd
+47.245.95.160,1443,SG,Alibaba Cloud LLC
+47.245.85.72,443,SG,Alibaba Cloud LLC
+43.156.181.203,443,SG,16 COLLYER QUAY
+146.235.18.248,45137,SG,Oracle Corporation
+64.49.14.41,2053,SG,Internet Utilities NA LLC
+138.2.89.64,32962,SG,Oracle Corporation
+13.250.14.76,443,SG,Amazon Data Services Singapore
+138.2.69.236,23334,SG,Oracle Corporation
+31.192.238.71,8443,SG,PDK LLC
+104.248.145.216,443,SG,DigitalOcean LLC
+138.2.95.61,1111,SG,Oracle Corporation
+194.36.179.17,2053,SG,FIRST SERVER LIMITED
+194.36.179.17,8443,SG,FIRST SERVER LIMITED
+160.22.79.166,443,SG,Onidel Pty Ltd
+129.150.49.58,18650,SG,Oracle Corporation
+5.34.176.119,81,SG,Green Floid LLC
+129.150.36.188,53435,SG,Oracle Corporation
+8.222.220.81,25435,SG,Alibaba Cloud Singapore Private Limited
+150.109.11.223,443,SG,16 COLLYER QUAY
+194.127.193.124,24467,SG,Greencloud LLC
+168.138.170.211,53702,SG,Oracle Public Cloud
+178.128.80.43,443,SG,DigitalOcean LLC
+8.219.58.164,57373,SG,Alibaba Cloud Singapore Private Limited
+138.2.95.33,17465,SG,Oracle Corporation
+138.2.89.238,43254,SG,Oracle Corporation
+158.178.246.142,61731,SG,Oracle Corporation
+164.52.2.98,443,SG,UCULSG
+194.127.193.240,50791,SG,Greencloud LLC
+45.76.183.217,49292,SG,Vultr Holdings LLC
+185.114.78.230,443,SG,Aryaka Networks India Pvt Ltd
+51.79.158.58,8443,SG,OVH Singapore PTE LTD
+47.130.35.116,8888,SG,Amazon Data Services Singapore
+64.49.14.41,8443,SG,Internet Utilities NA LLC
+31.192.238.71,2053,SG,PDK LLC
+8.219.155.21,443,SG,Alibaba Cloud Singapore Private Limited
+168.138.165.174,443,SG,Oracle Public Cloud
+129.150.35.29,587,SG,Oracle Corporation
+143.42.66.91,443,SG,Viewqwest Pte Ltd
+129.150.58.86,57621,SG,Oracle Corporation
+91.192.81.154,8443,SG,Melbikomas UAB
+168.138.184.172,443,SG,Oracle Public Cloud
+143.198.196.196,2053,SG,DigitalOcean LLC
+15.235.192.85,443,SG,OVH Singapore PTE LTD
+167.71.198.82,8443,SG,DigitalOcean LLC
+152.42.236.151,2053,SG,DigitalOcean LLC
+178.128.86.3,443,SG,DigitalOcean LLC
+160.22.79.155,443,SG,Onidel Pty Ltd
+138.2.64.229,443,SG,Oracle Corporation
+140.245.48.42,443,SG,Oracle Corporation
+103.195.191.55,443,SG,28 Kallang Place  0508 Singapore 339518
+52.76.110.129,20001,SG,Amazon Technologies Inc
+140.245.97.193,443,SG,Oracle Corporation
+161.117.81.228,4443,SG,1 Raffles Place  5900 One Raffles Place
+104.43.91.69,443,SG,Microsoft Corporation
+8.222.213.91,587,SG,Alibaba Cloud Singapore Private Limited
+152.42.236.151,8443,SG,DigitalOcean LLC
+152.42.241.71,2053,SG,DigitalOcean LLC
+45.76.159.76,443,SG,Vultr Holdings LLC
+209.97.173.243,443,SG,DigitalOcean LLC
+66.42.51.60,8443,SG,SGPVULTRCUST
+47.237.149.38,8443,SG,Alibaba Cloud LLC
+47.236.71.6,443,SG,Alibaba Cloud LLC
+34.143.159.175,443,SG,Google LLC
+3.0.50.69,443,SG,Amazon Data Services Singapore
+111.119.215.93,443,SG,HuaweiCloudSG
+92.112.22.94,443,SG,Private Customer
+38.180.249.123,443,SG,3NT SOLUTIONS LLP
+152.42.241.71,8443,SG,DigitalOcean LLC
+139.162.4.242,8443,SG,Linode LLC
+13.250.31.132,443,SG,Amazon Data Services Singapore
+38.244.147.68,443,SG,3NT SOLUTIONS LLP
+13.212.213.77,8443,SG,Amazon Data Services Singapore
+139.180.159.133,443,SG,SGPVULTRCUST
+128.199.128.28,123,SG,DigitalOcean LLC
+20.205.177.152,443,SG,Microsoft Corporation
+43.134.164.53,443,SG,6 COLLYER QUAY
+38.244.147.68,2053,SG,3NT SOLUTIONS LLP
+202.73.51.244,443,SG,Viewqwest Pte Ltd
+149.28.158.103,10030,SG,Vultr Holdings LLC
+47.236.21.74,443,SG,Alibaba Cloud LLC
+8.219.63.1,443,SG,Alibaba Cloud Singapore Private Limited
+47.236.29.162,443,SG,Alibaba Cloud LLC
+8.222.218.155,443,SG,Alibaba Cloud Singapore Private Limited
+43.252.21.100,443,SG,Specialist
+15.235.162.19,443,SG,OVH Singapore PTE LTD
+157.20.104.30,443,SG,Kuroitcom
+165.154.203.69,443,SG,Scloud Pte Ltd ta Scloud Pte Ltd
+47.74.157.194,443,SG,Alibaba Cloud  SG
+104.234.151.10,8443,SG,MoeChuang Network Limited
+103.229.96.157,443,SG,Epsilon Singapore Network
+194.156.163.45,443,SG,Misaka Network Inc
+64.235.61.166,443,SG,Singapore SG Datacenter
+158.178.229.178,443,SG,Oracle Corporation
+8.219.0.67,443,SG,Alibaba Cloud Singapore Private Limited
+64.235.43.213,443,SG,Singapore SG Datacenter
+168.138.189.91,443,SG,Oracle Public Cloud
+8.222.161.217,443,SG,Alibaba Cloud Singapore Private Limited
+64.235.43.144,443,SG,Singapore SG Datacenter
+20.247.137.183,443,SG,Microsoft Corporation
+18.162.156.23,12355,HK,Amazon Data Services Hong Kong
+103.112.185.138,587,HK,Rainbow Network Limited
+43.154.196.20,65121,HK,6 COLLYER QUAY
+8.210.96.197,12902,HK,Aliyun Computing CoLTD
+38.207.133.204,10002,HK,Nearoute Limited
+38.6.219.16,8080,HK,PEG TECH INC
+8.218.245.116,41528,HK,Alibaba Cloud Singapore Private Limited
+8.218.245.116,49701,HK,Alibaba Cloud Singapore Private Limited
+8.218.245.116,42805,HK,Alibaba Cloud Singapore Private Limited
+45.39.198.40,8080,HK,Internet Utilities NA LLC
+124.244.92.109,25203,HK,Hong Kong Broadband Network Ltd
+45.39.198.43,8080,HK,Internet Utilities NA LLC
+8.218.36.133,9010,HK,Alibaba Cloud Singapore Private Limited
+192.142.4.76,2053,HK,Ultahost Inc
+46.232.122.240,8000,HK,Dom Tehniki Ltd
+141.11.78.77,8080,HK,AKILE LTD
+141.11.149.195,12082,HK,AKILE LTD
+141.11.77.248,8080,HK,AKILE LTD
+192.252.182.52,7602,HK,Integen Inc
+47.79.20.64,443,HK,Alibaba Cloud LLC
+47.76.218.163,443,HK,Alibaba Cloud  HK
+141.11.91.67,8080,HK,Tusker Technologies Pty Ltd
+118.141.64.192,36619,HK,HGC Global Communications Limited
+62.192.175.43,12009,HK,Private Customer
+154.16.10.34,8080,HK,Digital Energy Technologies Limited
+210.6.207.42,18622,HK,Hong Kong Broadband Network Ltd
+45.149.186.112,8080,HK,AKILE LTD
+163.53.246.130,443,HK,ROUTE
+223.16.138.113,10002,HK,HGC Global Communications Limited
+223.16.138.113,10201,HK,HGC Global Communications Limited
+221.125.10.8,57537,HK,HGC Global Communications Limited
+223.16.138.113,12457,HK,HGC Global Communications Limited
+195.54.171.205,443,HK,IROKO Networks Corporation
+85.208.104.34,8080,HK,Internet Utilities Europe and Asia Limited
+192.131.142.161,46639,HK,LEASEWEB HONG KONG LIMITED
+219.76.13.167,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+219.76.13.181,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+43.132.244.52,21415,HK,6 COLLYER QUAY
+47.242.171.138,37021,HK,ALIBABA CLOUD  HK
+156.255.90.175,2053,HK,StepGo Limited
+219.76.13.183,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+219.76.13.177,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+154.16.10.177,443,HK,NetStack Ltd
+219.76.13.166,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+156.255.90.175,8443,HK,StepGo Limited
+36.50.90.241,47790,HK,IoT Innovation Technologies Company Limited
+5.180.98.146,22827,HK,TEN
+36.50.90.241,35951,HK,IoT Innovation Technologies Company Limited
+156.254.114.120,30011,HK,StepGo Limited
+2.56.91.89,2053,HK,ihchk vps in Hong Kong
+8.210.92.96,33335,HK,Aliyun Computing CoLTD
+219.76.13.169,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+43.155.117.16,443,HK,6 COLLYER QUAY
+38.180.94.97,443,HK,3NT SOLUTIONS LLP
+89.185.30.122,53346,HK,Private Customer
+38.244.198.107,443,HK,3NT SOLUTIONS LLP
+219.76.13.180,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
+154.21.201.83,443,HK,NetLab
+38.180.189.154,8443,HK,3NT SOLUTIONS LLP
+2.56.91.89,8443,HK,ihchk vps in Hong Kong
+38.180.94.171,443,HK,3NT SOLUTIONS LLP
+46.8.226.20,443,HK,CGI GLOBAL LIMITED
+38.71.124.249,443,HK,Cogent Communications LLC
+194.156.99.186,443,HK,FreeNet LLCFZ
+91.229.132.157,443,HK,Internet Utilities Europe and Asia Limited
+8.210.29.68,443,HK,Aliyun Computing CoLTD
+47.239.8.172,443,HK,ALIBABA CLOUD  HK
+16.162.225.15,443,HK,Amazon Data Services Hong Kong
+47.240.13.101,8420,HK,Alibaba Cloud  HK
+103.85.73.112,8443,HK,GAOFENG NETWORK LIMITED
+185.241.40.85,443,HK,BAGE CLOUD LLC
+47.239.183.154,443,HK,ALIBABA CLOUD  HK
+192.142.4.33,8443,HK,Ultahost Inc
+154.38.116.8,443,HK,STARCLOUD GLOBAL PTE LTD
+103.210.22.199,443,HK,Ucloud Hong Kong
+101.79.165.113,443,HK,CDNetworks
+194.34.254.212,443,HK,Aiyun HK Network Technology Limited
+152.32.215.105,8443,HK,UCLOUD INFORMATION TECHNOLOGY HK LIMITED
+43.198.204.35,443,HK,Amazoncom Inc
+156.254.114.171,443,HK,StepGo Limited
+119.28.68.147,443,HK,Tencent cloud computing Beijing Co Ltd
+46.20.109.64,443,HK,Nearoute Limited
+23.27.48.196,443,HK,Evoxt HK
+141.11.149.187,443,HK,AKILE LTD
+210.3.159.133,443,HK,HGC Global Communications Limited
+103.194.107.166,443,HK,Antbox Networks Limited
+45.38.42.109,8443,HK,STARK INDUSTRIES SOLUTIONS LTD
+31.59.138.88,8443,HK,CGI GLOBAL LIMITED
+31.59.138.88,2053,HK,CGI GLOBAL LIMITED
+45.38.42.198,2053,HK,STARK INDUSTRIES SOLUTIONS LTD
+31.59.136.248,2053,HK,CGI GLOBAL LIMITED
+31.57.108.19,2053,HK,CGI GLOBAL LIMITED
+31.59.174.251,2053,HK,CGI GLOBAL LIMITED
+31.58.220.246,8443,HK,CGI GLOBAL LIMITED
+31.56.113.71,8443,HK,CGI GLOBAL LIMITED
+31.56.113.71,2053,HK,CGI GLOBAL LIMITED
+31.56.113.68,443,HK,CGI GLOBAL LIMITED
+47.76.83.30,443,HK,Alibaba Cloud  HK
+47.243.166.181,443,HK,ALIBABA CLOUD  HK
+163.53.246.113,443,HK,ROUTE
+18.167.10.179,2053,HK,Amazon Data Services Hong Kong
+103.49.61.252,443,HK,BEST WEBTECHNOLOGY LIMITED
+202.85.53.74,443,HK,Mazen Ind Ltd
+47.240.15.210,4432,HK,Alibaba Cloud  HK
+31.58.226.57,2053,HK,CGI GLOBAL LIMITED
+46.8.78.122,8443,HK,CGI GLOBAL LIMITED
+217.60.38.13,443,HK,CGI GLOBAL LIMITED
+46.232.108.217,443,HK,Dom Tehniki Ltd
+194.156.99.182,8443,HK,FreeNet LLCFZ
 193.123.90.82,12648,AE,Oracle Corporation
 152.32.181.246,44070,AE,UCLOUD INFORMATION TECHNOLOGY HK LIMITED
 93.127.180.57,8443,AE,Private Customer
@@ -6527,115 +6787,6 @@
 185.39.207.103,8443,GR,GLOBAL CONNECTIVITY SOLUTIONS LLP
 94.131.8.201,81,GR,WorkTitans BV
 94.131.8.32,443,GR,WorkTitans BV
-18.162.156.23,12355,HK,Amazon Data Services Hong Kong
-103.112.185.138,587,HK,Rainbow Network Limited
-43.154.196.20,65121,HK,6 COLLYER QUAY
-8.210.96.197,12902,HK,Aliyun Computing CoLTD
-38.207.133.204,10002,HK,Nearoute Limited
-38.6.219.16,8080,HK,PEG TECH INC
-8.218.245.116,41528,HK,Alibaba Cloud Singapore Private Limited
-8.218.245.116,49701,HK,Alibaba Cloud Singapore Private Limited
-8.218.245.116,42805,HK,Alibaba Cloud Singapore Private Limited
-45.39.198.40,8080,HK,Internet Utilities NA LLC
-124.244.92.109,25203,HK,Hong Kong Broadband Network Ltd
-45.39.198.43,8080,HK,Internet Utilities NA LLC
-8.218.36.133,9010,HK,Alibaba Cloud Singapore Private Limited
-192.142.4.76,2053,HK,Ultahost Inc
-46.232.122.240,8000,HK,Dom Tehniki Ltd
-141.11.78.77,8080,HK,AKILE LTD
-141.11.149.195,12082,HK,AKILE LTD
-141.11.77.248,8080,HK,AKILE LTD
-192.252.182.52,7602,HK,Integen Inc
-47.79.20.64,443,HK,Alibaba Cloud LLC
-47.76.218.163,443,HK,Alibaba Cloud  HK
-141.11.91.67,8080,HK,Tusker Technologies Pty Ltd
-118.141.64.192,36619,HK,HGC Global Communications Limited
-62.192.175.43,12009,HK,Private Customer
-154.16.10.34,8080,HK,Digital Energy Technologies Limited
-210.6.207.42,18622,HK,Hong Kong Broadband Network Ltd
-45.149.186.112,8080,HK,AKILE LTD
-163.53.246.130,443,HK,ROUTE
-223.16.138.113,10002,HK,HGC Global Communications Limited
-223.16.138.113,10201,HK,HGC Global Communications Limited
-221.125.10.8,57537,HK,HGC Global Communications Limited
-223.16.138.113,12457,HK,HGC Global Communications Limited
-195.54.171.205,443,HK,IROKO Networks Corporation
-85.208.104.34,8080,HK,Internet Utilities Europe and Asia Limited
-192.131.142.161,46639,HK,LEASEWEB HONG KONG LIMITED
-219.76.13.167,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-219.76.13.181,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-43.132.244.52,21415,HK,6 COLLYER QUAY
-47.242.171.138,37021,HK,ALIBABA CLOUD  HK
-156.255.90.175,2053,HK,StepGo Limited
-219.76.13.183,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-219.76.13.177,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-154.16.10.177,443,HK,NetStack Ltd
-219.76.13.166,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-156.255.90.175,8443,HK,StepGo Limited
-36.50.90.241,47790,HK,IoT Innovation Technologies Company Limited
-5.180.98.146,22827,HK,TEN
-36.50.90.241,35951,HK,IoT Innovation Technologies Company Limited
-156.254.114.120,30011,HK,StepGo Limited
-2.56.91.89,2053,HK,ihchk vps in Hong Kong
-8.210.92.96,33335,HK,Aliyun Computing CoLTD
-219.76.13.169,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-43.155.117.16,443,HK,6 COLLYER QUAY
-38.180.94.97,443,HK,3NT SOLUTIONS LLP
-89.185.30.122,53346,HK,Private Customer
-38.244.198.107,443,HK,3NT SOLUTIONS LLP
-219.76.13.180,443,HK,Hong Kong Telecommunications HKT Limited Mass Internet
-154.21.201.83,443,HK,NetLab
-38.180.189.154,8443,HK,3NT SOLUTIONS LLP
-2.56.91.89,8443,HK,ihchk vps in Hong Kong
-38.180.94.171,443,HK,3NT SOLUTIONS LLP
-46.8.226.20,443,HK,CGI GLOBAL LIMITED
-38.71.124.249,443,HK,Cogent Communications LLC
-194.156.99.186,443,HK,FreeNet LLCFZ
-91.229.132.157,443,HK,Internet Utilities Europe and Asia Limited
-8.210.29.68,443,HK,Aliyun Computing CoLTD
-47.239.8.172,443,HK,ALIBABA CLOUD  HK
-16.162.225.15,443,HK,Amazon Data Services Hong Kong
-47.240.13.101,8420,HK,Alibaba Cloud  HK
-103.85.73.112,8443,HK,GAOFENG NETWORK LIMITED
-185.241.40.85,443,HK,BAGE CLOUD LLC
-47.239.183.154,443,HK,ALIBABA CLOUD  HK
-192.142.4.33,8443,HK,Ultahost Inc
-154.38.116.8,443,HK,STARCLOUD GLOBAL PTE LTD
-103.210.22.199,443,HK,Ucloud Hong Kong
-101.79.165.113,443,HK,CDNetworks
-194.34.254.212,443,HK,Aiyun HK Network Technology Limited
-152.32.215.105,8443,HK,UCLOUD INFORMATION TECHNOLOGY HK LIMITED
-43.198.204.35,443,HK,Amazoncom Inc
-156.254.114.171,443,HK,StepGo Limited
-119.28.68.147,443,HK,Tencent cloud computing Beijing Co Ltd
-46.20.109.64,443,HK,Nearoute Limited
-23.27.48.196,443,HK,Evoxt HK
-141.11.149.187,443,HK,AKILE LTD
-210.3.159.133,443,HK,HGC Global Communications Limited
-103.194.107.166,443,HK,Antbox Networks Limited
-45.38.42.109,8443,HK,STARK INDUSTRIES SOLUTIONS LTD
-31.59.138.88,8443,HK,CGI GLOBAL LIMITED
-31.59.138.88,2053,HK,CGI GLOBAL LIMITED
-45.38.42.198,2053,HK,STARK INDUSTRIES SOLUTIONS LTD
-31.59.136.248,2053,HK,CGI GLOBAL LIMITED
-31.57.108.19,2053,HK,CGI GLOBAL LIMITED
-31.59.174.251,2053,HK,CGI GLOBAL LIMITED
-31.58.220.246,8443,HK,CGI GLOBAL LIMITED
-31.56.113.71,8443,HK,CGI GLOBAL LIMITED
-31.56.113.71,2053,HK,CGI GLOBAL LIMITED
-31.56.113.68,443,HK,CGI GLOBAL LIMITED
-47.76.83.30,443,HK,Alibaba Cloud  HK
-47.243.166.181,443,HK,ALIBABA CLOUD  HK
-163.53.246.113,443,HK,ROUTE
-18.167.10.179,2053,HK,Amazon Data Services Hong Kong
-103.49.61.252,443,HK,BEST WEBTECHNOLOGY LIMITED
-202.85.53.74,443,HK,Mazen Ind Ltd
-47.240.15.210,4432,HK,Alibaba Cloud  HK
-31.58.226.57,2053,HK,CGI GLOBAL LIMITED
-46.8.78.122,8443,HK,CGI GLOBAL LIMITED
-217.60.38.13,443,HK,CGI GLOBAL LIMITED
-46.232.108.217,443,HK,Dom Tehniki Ltd
-194.156.99.182,8443,HK,FreeNet LLCFZ
 185.156.110.134,443,HR,WorkTitans BV
 213.159.77.240,8443,HR,WorkTitans BV
 213.159.77.220,443,HR,WorkTitans BV
@@ -6664,14 +6815,6 @@
 38.180.225.185,443,HU,3NT SOLUTIONS LLP
 91.219.236.202,8443,HU,ServerAstra Kft
 180.149.37.24,8443,HU,GCore Labs Customer assignment
-149.129.250.8,443,ID,21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia
-203.194.112.119,2053,ID,CV Rumahweb Indonesia
-203.194.112.119,8443,ID,CV Rumahweb Indonesia
-156.244.1.250,8443,ID,Lightnode Limited
-43.218.77.16,443,ID,Amazoncom Inc
-103.6.207.108,8080,ID,PT Pusat Media Indonesia
-36.95.152.58,12137,ID,PT Telekomunikasi Indonesia
-43.218.77.16,1443,ID,Amazoncom Inc
 63.32.194.15,8443,IE,Amazon Data Services Ireland Limited
 40.113.60.248,8443,IE,Microsoft Corporation
 52.19.138.237,2053,IE,Amazon Data Services Ireland Limited
@@ -8120,18 +8263,6 @@
 216.238.81.141,443,MX,The Constant Company LLC
 140.84.178.238,23010,MX,Oracle Corporation
 201.149.15.14,21585,MX,Megacable Comunicaciones de Mexico SA de CV
-47.250.139.59,443,MY,Alibaba Cloud LLC
-20.17.104.31,443,MY,Microsoft Corporation
-47.250.37.87,443,MY,Alibaba Cloud  MY
-47.254.255.125,443,MY,Alibaba Cloud  MY
-47.254.206.121,443,MY,Alibaba Cloud  MY
-58.27.117.24,443,MY,TMNET
-38.60.193.247,13300,MY,Kaopu Cloud HK Limited
-47.250.59.132,443,MY,Alibaba Cloud  MY
-47.250.139.249,443,MY,Alibaba Cloud LLC
-47.250.132.147,443,MY,Alibaba Cloud LLC
-155.254.60.225,443,MY,Evoxt Enterprise
-47.254.235.252,443,MY,Alibaba Cloud  MY
 102.220.204.34,54321,NG,IPV4 for Abj
 31.15.18.56,2053,NL,CGI GLOBAL LIMITED
 31.15.18.56,8443,NL,CGI GLOBAL LIMITED
@@ -13715,137 +13846,6 @@
 83.147.192.117,8443,SE,Smart Digital Ideas DOO
 46.226.165.4,443,SE,Aeza International LTD
 62.60.237.85,443,SE,Smart Digital Ideas DOO
-167.99.73.22,443,SG,DigitalOcean LLC
-8.219.59.132,48964,SG,Alibaba Cloud Singapore Private Limited
-51.79.158.58,2053,SG,OVH Singapore PTE LTD
-43.156.107.236,12131,SG,6 COLLYER QUAY
-13.250.131.37,443,SG,Amazon Data Services Singapore
-91.192.81.154,2053,SG,Melbikomas UAB
-8.219.126.137,491,SG,Alibaba Cloud Singapore Private Limited
-43.134.167.135,9950,SG,6 COLLYER QUAY
-8.219.59.132,48130,SG,Alibaba Cloud Singapore Private Limited
-47.236.119.190,51342,SG,Alibaba Cloud LLC
-47.74.254.191,8900,SG,Alibaba Cloud  SG
-194.36.179.5,2053,SG,FIRST SERVER LIMITED
-143.198.92.220,443,SG,DigitalOcean LLC
-143.198.196.196,8443,SG,DigitalOcean LLC
-213.35.100.31,47112,SG,Oracle Svenska AB
-213.35.108.135,12596,SG,Oracle Svenska AB
-158.178.243.152,61731,SG,Oracle Corporation
-43.156.116.194,443,SG,6 COLLYER QUAY
-164.52.2.100,443,SG,UCULSG
-83.142.30.4,2096,SG,Zappie Host LLC
-54.255.217.120,8192,SG,Amazon Data Services Japan
-158.178.236.14,61731,SG,Oracle Corporation
-146.235.19.79,28983,SG,Oracle Corporation
-128.199.134.152,443,SG,DigitalOcean LLC
-43.128.95.110,40029,SG,6 COLLYER QUAY
-45.76.179.81,443,SG,Vultr Holdings LLC
-164.52.2.99,443,SG,UCULSG
-168.138.171.70,23280,SG,Oracle Public Cloud
-213.35.107.73,443,SG,Oracle Svenska AB
-168.138.181.188,61731,SG,Oracle Public Cloud
-185.81.28.95,30503,SG,AKILE LTD
-160.22.79.179,443,SG,Onidel Pty Ltd
-47.245.95.160,1443,SG,Alibaba Cloud LLC
-47.245.85.72,443,SG,Alibaba Cloud LLC
-43.156.181.203,443,SG,16 COLLYER QUAY
-146.235.18.248,45137,SG,Oracle Corporation
-64.49.14.41,2053,SG,Internet Utilities NA LLC
-138.2.89.64,32962,SG,Oracle Corporation
-13.250.14.76,443,SG,Amazon Data Services Singapore
-138.2.69.236,23334,SG,Oracle Corporation
-31.192.238.71,8443,SG,PDK LLC
-104.248.145.216,443,SG,DigitalOcean LLC
-138.2.95.61,1111,SG,Oracle Corporation
-194.36.179.17,2053,SG,FIRST SERVER LIMITED
-194.36.179.17,8443,SG,FIRST SERVER LIMITED
-160.22.79.166,443,SG,Onidel Pty Ltd
-129.150.49.58,18650,SG,Oracle Corporation
-5.34.176.119,81,SG,Green Floid LLC
-129.150.36.188,53435,SG,Oracle Corporation
-8.222.220.81,25435,SG,Alibaba Cloud Singapore Private Limited
-150.109.11.223,443,SG,16 COLLYER QUAY
-194.127.193.124,24467,SG,Greencloud LLC
-168.138.170.211,53702,SG,Oracle Public Cloud
-178.128.80.43,443,SG,DigitalOcean LLC
-8.219.58.164,57373,SG,Alibaba Cloud Singapore Private Limited
-138.2.95.33,17465,SG,Oracle Corporation
-138.2.89.238,43254,SG,Oracle Corporation
-158.178.246.142,61731,SG,Oracle Corporation
-164.52.2.98,443,SG,UCULSG
-194.127.193.240,50791,SG,Greencloud LLC
-45.76.183.217,49292,SG,Vultr Holdings LLC
-185.114.78.230,443,SG,Aryaka Networks India Pvt Ltd
-51.79.158.58,8443,SG,OVH Singapore PTE LTD
-47.130.35.116,8888,SG,Amazon Data Services Singapore
-64.49.14.41,8443,SG,Internet Utilities NA LLC
-31.192.238.71,2053,SG,PDK LLC
-8.219.155.21,443,SG,Alibaba Cloud Singapore Private Limited
-168.138.165.174,443,SG,Oracle Public Cloud
-129.150.35.29,587,SG,Oracle Corporation
-143.42.66.91,443,SG,Viewqwest Pte Ltd
-129.150.58.86,57621,SG,Oracle Corporation
-91.192.81.154,8443,SG,Melbikomas UAB
-168.138.184.172,443,SG,Oracle Public Cloud
-143.198.196.196,2053,SG,DigitalOcean LLC
-15.235.192.85,443,SG,OVH Singapore PTE LTD
-167.71.198.82,8443,SG,DigitalOcean LLC
-152.42.236.151,2053,SG,DigitalOcean LLC
-178.128.86.3,443,SG,DigitalOcean LLC
-160.22.79.155,443,SG,Onidel Pty Ltd
-138.2.64.229,443,SG,Oracle Corporation
-140.245.48.42,443,SG,Oracle Corporation
-103.195.191.55,443,SG,28 Kallang Place  0508 Singapore 339518
-52.76.110.129,20001,SG,Amazon Technologies Inc
-140.245.97.193,443,SG,Oracle Corporation
-161.117.81.228,4443,SG,1 Raffles Place  5900 One Raffles Place
-104.43.91.69,443,SG,Microsoft Corporation
-8.222.213.91,587,SG,Alibaba Cloud Singapore Private Limited
-152.42.236.151,8443,SG,DigitalOcean LLC
-152.42.241.71,2053,SG,DigitalOcean LLC
-45.76.159.76,443,SG,Vultr Holdings LLC
-209.97.173.243,443,SG,DigitalOcean LLC
-66.42.51.60,8443,SG,SGPVULTRCUST
-47.237.149.38,8443,SG,Alibaba Cloud LLC
-47.236.71.6,443,SG,Alibaba Cloud LLC
-34.143.159.175,443,SG,Google LLC
-3.0.50.69,443,SG,Amazon Data Services Singapore
-111.119.215.93,443,SG,HuaweiCloudSG
-92.112.22.94,443,SG,Private Customer
-38.180.249.123,443,SG,3NT SOLUTIONS LLP
-152.42.241.71,8443,SG,DigitalOcean LLC
-139.162.4.242,8443,SG,Linode LLC
-13.250.31.132,443,SG,Amazon Data Services Singapore
-38.244.147.68,443,SG,3NT SOLUTIONS LLP
-13.212.213.77,8443,SG,Amazon Data Services Singapore
-139.180.159.133,443,SG,SGPVULTRCUST
-128.199.128.28,123,SG,DigitalOcean LLC
-20.205.177.152,443,SG,Microsoft Corporation
-43.134.164.53,443,SG,6 COLLYER QUAY
-38.244.147.68,2053,SG,3NT SOLUTIONS LLP
-202.73.51.244,443,SG,Viewqwest Pte Ltd
-149.28.158.103,10030,SG,Vultr Holdings LLC
-47.236.21.74,443,SG,Alibaba Cloud LLC
-8.219.63.1,443,SG,Alibaba Cloud Singapore Private Limited
-47.236.29.162,443,SG,Alibaba Cloud LLC
-8.222.218.155,443,SG,Alibaba Cloud Singapore Private Limited
-43.252.21.100,443,SG,Specialist
-15.235.162.19,443,SG,OVH Singapore PTE LTD
-157.20.104.30,443,SG,Kuroitcom
-165.154.203.69,443,SG,Scloud Pte Ltd ta Scloud Pte Ltd
-47.74.157.194,443,SG,Alibaba Cloud  SG
-104.234.151.10,8443,SG,MoeChuang Network Limited
-103.229.96.157,443,SG,Epsilon Singapore Network
-194.156.163.45,443,SG,Misaka Network Inc
-64.235.61.166,443,SG,Singapore SG Datacenter
-158.178.229.178,443,SG,Oracle Corporation
-8.219.0.67,443,SG,Alibaba Cloud Singapore Private Limited
-64.235.43.213,443,SG,Singapore SG Datacenter
-168.138.189.91,443,SG,Oracle Public Cloud
-8.222.161.217,443,SG,Alibaba Cloud Singapore Private Limited
-64.235.43.144,443,SG,Singapore SG Datacenter
-20.247.137.183,443,SG,Microsoft Corporation
 45.83.131.133,443,SI,WorkTitans BV
 45.83.131.8,2096,SI,WorkTitans BV
 45.83.131.36,443,SI,WorkTitans BV
