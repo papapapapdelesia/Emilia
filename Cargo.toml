@@ -5,14 +5,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Versi disederhanakan menjadi "1" untuk mengambil versi stabil terbaru dari seri 1.x.
-tokio = { version = "1", features = ["full"] }
+tokio = { version = "1.0", features = ["full"] }
 futures = "0.3"
 native-tls = "0.2"
 tokio-native-tls = "0.3"
-
-# Menambahkan 'serde' secara eksplisit.
-# Ini adalah praktik terbaik karena 'serde_json' bergantung padanya
-# dan Anda mungkin memerlukan fitur 'derive' untuk struct kustom.
-serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
