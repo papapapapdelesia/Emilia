@@ -18,7 +18,7 @@ const OUTPUT_AZ: &str = "Data/alive.txt"; //Output dalam susunan A-Z
 const OUTPUT_PRIORITY: &str = "Data/Country-ALIVE.txt"; //Output dalam susunan PRIORITY_COUNTRIES lalu A-Z
 const MAX_CONCURRENT: usize = 175;
 const TIMEOUT_SECONDS: u64 = 9;
-const PRIORITY_COUNTRIES: [&str; 3] = ["ID", "MY","SG", "HK"];
+const PRIORITY_COUNTRIES: [&str; 3] = ["ID","MY","SG","HK"];
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
 
