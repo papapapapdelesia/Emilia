@@ -221,8 +221,8 @@ async fn process_proxy(
 
     let ip = parts[0];
     let port_str = parts[1];
-    let country = parts[2];
-    let org = parts[3];
+    let country_from_file = parts[2]; // Country dari file input (sebagai fallback)
+    let org_from_file = parts[3];     // Org dari file input (sebagai fallback)
 
     let port_num = match port_str.parse::<u16>() {
         Ok(p) => p,
@@ -236,20 +236,28 @@ async fn process_proxy(
         Ok(proxy_data) => {
             if let Some(Value::String(proxy_ip)) = proxy_data.get("clientIp") {
                 if proxy_ip != original_ip {
-                    let org_name_from_response = if let Some(Value::String(org_val)) = proxy_data.get("asOrganization") {
-                        clean_org_name(org_val)
+                    // Ambil country code dari field "country" dalam response Cloudflare
+                    let country_from_response = if let Some(Value::String(country_code)) = proxy_data.get("country") {
+                        country_code.clone() // Contoh: "ID", "SG", "US", dll
                     } else {
-                        clean_org_name(org)
+                        country_from_file.to_string() // Fallback ke file input
+                    };
+
+                    // Ambil organization dari field "asOrganization" dalam response Cloudflare  
+                    let org_name_from_response = if let Some(Value::String(org_val)) = proxy_data.get("asOrganization") {
+                        clean_org_name(org_val) // Contoh: "PT XLSMART Telecom Sejahtera Tbk"
+                    } else {
+                        clean_org_name(org_from_file) // Fallback ke file input
                     };
 
                     let proxy_entry = ProxyEntry {
                         ip: ip.to_string(),
                         port: port_num,
-                        country: country.to_string(),
-                        org: org_name_from_response,
+                        country: country_from_response, // "ID" dari Cloudflare
+                        org: org_name_from_response,    // "PT XLSMART Telecom Sejahtera Tbk" dari Cloudflare
                     };
                     
-                    println!("CF PROXY LIVE ✅: {}:{} - {}", ip, port_num, country);
+                    println!("CF PROXY LIVE ✅: {}:{} - {} - {}", ip, port_num, proxy_entry.country, proxy_entry.org);
 
                     let mut active_proxies_locked = active_proxies.lock().unwrap();
                     active_proxies_locked.push(proxy_entry);
