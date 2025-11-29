@@ -8758,6 +8758,7 @@
 156.244.1.250,8443,ID,Lightnode Limited
 36.95.152.58,12137,ID,PT Telekomunikasi Indonesia
 43.218.77.16,1443,ID,Amazoncom Inc
+31.97.50.106,443,ID,Hostinger International Limited
 149.129.250.8,443,ID,21F Ciputra World 1 DBS Tower JalanProf DR Satrio Kav 35 Jakarta 12940 Indonesia
 63.32.194.15,8443,IE,Amazon Data Services Ireland Limited
 63.32.194.15,2053,IE,Amazon Data Services Ireland Limited
