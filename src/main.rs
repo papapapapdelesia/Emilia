@@ -17,8 +17,8 @@ const PATH_META: &str = "/meta";
 const PROXY_FILE: &str = "Data/IPPROXY23K.txt";
 const OUTPUT_AZ: &str = "Data/alive.txt";
 const OUTPUT_PRIORITY: &str = "Data/Country-ALIVE.txt";
-const MAX_CONCURRENT: usize = 180;
-const TIMEOUT_SECONDS: u64 = 15;
+const MAX_CONCURRENT: usize = 100; // Kurangi dari 180 ke 100 untuk stabilitas
+const TIMEOUT_SECONDS: u64 = 20; // Tingkatkan timeout
 const PRIORITY_COUNTRIES: [&str; 4] = ["ID","MY","SG","HK"];
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
@@ -60,10 +60,6 @@ impl CookieJar {
             format!("Cookie: {}\r\n", self.cookies.join("; "))
         }
     }
-    
-    fn is_empty(&self) -> bool {
-        self.cookies.is_empty()
-    }
 }
 
 #[tokio::main]
@@ -95,11 +91,26 @@ async fn main() -> Result<()> {
 
     // Get original IP (without proxy) for comparison
     println!("\n[1/3] Getting original IP information...");
+    
+    // Coba beberapa metode untuk mendapatkan IP asli
     let original_ip_data = match get_original_ip_info().await {
-        Ok(data) => data,
+        Ok(data) => {
+            println!("✓ Got IP info from Cloudflare");
+            data
+        },
         Err(e) => {
-            eprintln!("✗ Failed to get original IP info: {}", e);
-            return Err(e.into());
+            println!("⚠️  Cloudflare failed: {}. Trying alternative API...", e);
+            // Fallback ke API lain
+            match get_ip_from_alternative_api().await {
+                Ok(data) => {
+                    println!("✓ Got IP info from alternative API");
+                    data
+                },
+                Err(e2) => {
+                    eprintln!("✗ All methods failed: {} and {}", e, e2);
+                    return Err("Failed to get original IP info".into());
+                }
+            }
         }
     };
 
@@ -187,7 +198,7 @@ async fn main() -> Result<()> {
     }
 
     println!("\n==========================================");
-    println!("   SCANNING COMPLETED SUCCESSFULLY!");
+    println!("   SCANNING COMPLETED!");
     println!("==========================================");
     
     Ok(())
@@ -213,14 +224,80 @@ async fn get_original_ip_info() -> Result<Value> {
     let mut cookie_jar = CookieJar::new();
     
     // Step 1: Access homepage to get cookies
-    if let Err(e) = make_request(IP_RESOLVER, PATH_HOME, None, &mut cookie_jar, false).await {
-        eprintln!("  Warning: Failed to get homepage cookies: {}", e);
+    println!("  Getting homepage for cookies...");
+    match make_request(IP_RESOLVER, PATH_HOME, None, &mut cookie_jar, false).await {
+        Ok((headers, body)) => {
+            println!("  Homepage response length: {} bytes", body.len());
+            // Debug: print response headers
+            let status_line = headers.lines().next().unwrap_or("No status");
+            println!("  Status: {}", status_line);
+        },
+        Err(e) => {
+            println!("  Warning: Failed to get homepage: {}", e);
+        }
     }
     
     // Step 2: Access meta endpoint with cookies
-    let (_, body) = make_request(IP_RESOLVER, PATH_META, None, &mut cookie_jar, true).await?;
+    println!("  Getting meta data...");
+    let (meta_headers, meta_body) = make_request(IP_RESOLVER, PATH_META, None, &mut cookie_jar, true).await?;
     
-    parse_json_response(&body)
+    // Debug information
+    let status_line = meta_headers.lines().next().unwrap_or("No status");
+    println!("  Meta endpoint status: {}", status_line);
+    println!("  Meta response length: {} bytes", meta_body.len());
+    
+    // Print first 200 chars for debugging
+    if meta_body.len() > 200 {
+        println!("  First 200 chars: {}", &meta_body[..200]);
+    } else {
+        println!("  Full response: {}", meta_body);
+    }
+    
+    parse_json_response(&meta_body)
+}
+
+async fn get_ip_from_alternative_api() -> Result<Value> {
+    println!("  Trying ipinfo.io...");
+    
+    // Gunakan API alternatif untuk mendapatkan IP
+    let client = reqwest::Client::new();
+    let response = client
+        .get("https://ipinfo.io/json")
+        .header("User-Agent", "Mozilla/5.0")
+        .timeout(Duration::from_secs(10))
+        .send()
+        .await?;
+    
+    let json_data: Value = response.json().await?;
+    
+    // Format data agar mirip dengan Cloudflare response
+    let mut result = serde_json::Map::new();
+    
+    if let Some(ip) = json_data.get("ip").and_then(|v| v.as_str()) {
+        result.insert("clientIp".to_string(), Value::String(ip.to_string()));
+    }
+    
+    if let Some(country) = json_data.get("country").and_then(|v| v.as_str()) {
+        result.insert("country".to_string(), Value::String(country.to_string()));
+    }
+    
+    if let Some(city) = json_data.get("city").and_then(|v| v.as_str()) {
+        result.insert("city".to_string(), Value::String(city.to_string()));
+    }
+    
+    if let Some(org) = json_data.get("org").and_then(|v| v.as_str()) {
+        result.insert("asOrganization".to_string(), Value::String(org.to_string()));
+    }
+    
+    if let Some(region) = json_data.get("region").and_then(|v| v.as_str()) {
+        result.insert("region".to_string(), Value::String(region.to_string()));
+    }
+    
+    result.insert("hostname".to_string(), Value::String("speed.cloudflare.com".to_string()));
+    result.insert("httpProtocol".to_string(), Value::String("HTTP/2".to_string()));
+    result.insert("colo".to_string(), Value::String("UNKNOWN".to_string()));
+    
+    Ok(Value::Object(result))
 }
 
 async fn make_request(
@@ -260,6 +337,7 @@ async fn make_request(
             headers.push("Sec-Ch-Ua-Mobile: ?0".to_string());
             headers.push("Sec-Ch-Ua-Platform: \"Linux\"".to_string());
             headers.push("Sec-Gpc: 1".to_string());
+            headers.push("Origin: https://speed.cloudflare.com".to_string());
         }
         
         // Build the complete request
@@ -320,7 +398,8 @@ async fn make_request(
             
             Ok((headers_part.to_string(), body))
         } else {
-            Err("Invalid HTTP response: No header/body separator found".into())
+            // Jika tidak ada pemisah header/body, return keseluruhan sebagai body
+            Ok(("No headers found".to_string(), response_str))
         }
     })
     .await
@@ -334,24 +413,39 @@ fn parse_json_response(response_body: &str) -> Result<Value> {
         return Err("Empty response".into());
     }
     
-    // Try to parse as JSON directly
+    // Coba parse langsung sebagai JSON
     match serde_json::from_str::<Value>(trimmed) {
-        Ok(json) => Ok(json),
+        Ok(json) => {
+            // Cek apakah ini JSON valid yang kita harapkan
+            if json.get("clientIp").is_some() {
+                return Ok(json);
+            } else {
+                // JSON valid tapi tidak ada clientIp field
+                return Err("JSON response doesn't contain clientIp".into());
+            }
+        },
         Err(_) => {
-            // Try to find JSON object in the response
+            // Coba cari JSON object dalam response
             if let Some(start) = trimmed.find('{') {
                 if let Some(end) = trimmed.rfind('}') {
-                    let json_str = &trimmed[start..=end];
-                    match serde_json::from_str::<Value>(json_str) {
-                        Ok(json) => Ok(json),
-                        Err(e) => Err(format!("Failed to parse JSON: {}", e).into()),
+                    if end > start {
+                        let json_str = &trimmed[start..=end];
+                        match serde_json::from_str::<Value>(json_str) {
+                            Ok(json) => {
+                                if json.get("clientIp").is_some() {
+                                    return Ok(json);
+                                }
+                            },
+                            Err(e) => {
+                                return Err(format!("Found JSON but couldn't parse: {}", e).into());
+                            }
+                        }
                     }
-                } else {
-                    Err("No closing brace found in response".into())
                 }
-            } else {
-                Err("No JSON object found in response".into())
             }
+            
+            // Jika masih gagal, coba decode jika mungkin ada HTML atau content lain
+            Err("No valid JSON found in response".into())
         }
     }
 }
