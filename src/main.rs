@@ -17,9 +17,9 @@ const PATH_META: &str = "/meta";
 const PROXY_FILE: &str = "Data/IPPROXY23K.txt";
 const OUTPUT_AZ: &str = "Data/alive.txt";
 const OUTPUT_PRIORITY: &str = "Data/Country-ALIVE.txt";
-const MAX_CONCURRENT: usize = 100; // Kurangi dari 180 ke 100 untuk stabilitas
-const TIMEOUT_SECONDS: u64 = 20; // Tingkatkan timeout
-const PRIORITY_COUNTRIES: [&str; 4] = ["ID","MY","SG","HK"];
+const MAX_CONCURRENT: usize = 100;
+const TIMEOUT_SECONDS: u64 = 20;
+const PRIORITY_COUNTRIES: [&str; 4] = ["ID", "MY", "SG", "HK"];
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
 
@@ -40,7 +40,7 @@ impl CookieJar {
     fn new() -> Self {
         Self { cookies: Vec::new() }
     }
-    
+
     fn add_from_headers(&mut self, headers: &str) {
         for line in headers.lines() {
             let line_lower = line.to_lowercase();
@@ -52,7 +52,7 @@ impl CookieJar {
             }
         }
     }
-    
+
     fn to_header(&self) -> String {
         if self.cookies.is_empty() {
             String::new()
@@ -65,7 +65,7 @@ impl CookieJar {
 #[tokio::main]
 async fn main() -> Result<()> {
     println!("==========================================");
-    println!("   CLOUDFLARE PROXY SCANNER v2.0");
+    println!("   CLOUDFLARE PROXY SCANNER v2.0 (Fixed)");
     println!("==========================================");
 
     // Create output directories
@@ -91,8 +91,7 @@ async fn main() -> Result<()> {
 
     // Get original IP (without proxy) for comparison
     println!("\n[1/3] Getting original IP information...");
-    
-    // Coba beberapa metode untuk mendapatkan IP asli
+
     let original_ip_data = match get_original_ip_info().await {
         Ok(data) => {
             println!("✓ Got IP info from Cloudflare");
@@ -100,7 +99,6 @@ async fn main() -> Result<()> {
         },
         Err(e) => {
             println!("⚠️  Cloudflare failed: {}. Trying alternative API...", e);
-            // Fallback ke API lain
             match get_ip_from_alternative_api().await {
                 Ok(data) => {
                     println!("✓ Got IP info from alternative API");
@@ -142,7 +140,7 @@ async fn main() -> Result<()> {
             let counter = Arc::clone(&counter);
             
             async move {
-                let result = process_proxy_with_session(proxy_line, &original_ip, &active_proxies).await;
+                process_proxy_with_session(proxy_line, &original_ip, &active_proxies).await;
                 
                 // Update progress
                 let mut counter_lock = counter.lock().unwrap();
@@ -152,8 +150,6 @@ async fn main() -> Result<()> {
                            counter_lock.0, counter_lock.1,
                            (counter_lock.0 as f32 / counter_lock.1 as f32) * 100.0);
                 }
-                
-                result
             }
         })
     ).buffer_unordered(MAX_CONCURRENT).collect::<Vec<()>>();
@@ -228,7 +224,7 @@ async fn get_original_ip_info() -> Result<Value> {
     match make_request(IP_RESOLVER, PATH_HOME, None, &mut cookie_jar, false).await {
         Ok((headers, body)) => {
             println!("  Homepage response length: {} bytes", body.len());
-            // Debug: print response headers
+            // Debug: print response headers status
             let status_line = headers.lines().next().unwrap_or("No status");
             println!("  Status: {}", status_line);
         },
@@ -246,12 +242,9 @@ async fn get_original_ip_info() -> Result<Value> {
     println!("  Meta endpoint status: {}", status_line);
     println!("  Meta response length: {} bytes", meta_body.len());
     
-    // Print first 200 chars for debugging
-    if meta_body.len() > 200 {
-        println!("  First 200 chars: {}", &meta_body[..200]);
-    } else {
-        println!("  Full response: {}", meta_body);
-    }
+    // FIXED: Print safe preview to avoid panic on binary data
+    let preview: String = meta_body.chars().take(200).collect();
+    println!("  First 200 chars: {}", preview);
     
     parse_json_response(&meta_body)
 }
@@ -259,7 +252,7 @@ async fn get_original_ip_info() -> Result<Value> {
 async fn get_ip_from_alternative_api() -> Result<Value> {
     println!("  Trying ipinfo.io...");
     
-    // Gunakan API alternatif untuk mendapatkan IP
+    // Gunakan reqwest untuk API alternatif
     let client = reqwest::Client::new();
     let response = client
         .get("https://ipinfo.io/json")
@@ -289,13 +282,8 @@ async fn get_ip_from_alternative_api() -> Result<Value> {
         result.insert("asOrganization".to_string(), Value::String(org.to_string()));
     }
     
-    if let Some(region) = json_data.get("region").and_then(|v| v.as_str()) {
-        result.insert("region".to_string(), Value::String(region.to_string()));
-    }
-    
     result.insert("hostname".to_string(), Value::String("speed.cloudflare.com".to_string()));
     result.insert("httpProtocol".to_string(), Value::String("HTTP/2".to_string()));
-    result.insert("colo".to_string(), Value::String("UNKNOWN".to_string()));
     
     Ok(Value::Object(result))
 }
@@ -318,7 +306,10 @@ async fn make_request(
         headers.push("User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36".to_string());
         headers.push("Accept: */*".to_string());
         headers.push("Accept-Language: en-US,en;q=0.8".to_string());
-        headers.push("Accept-Encoding: gzip, deflate, br".to_string());
+        
+        // FIXED: Force identity encoding to receive plain text (not GZIP)
+        headers.push("Accept-Encoding: identity".to_string());
+        
         headers.push("Connection: close".to_string());
         
         // Add cookies if available
@@ -398,7 +389,6 @@ async fn make_request(
             
             Ok((headers_part.to_string(), body))
         } else {
-            // Jika tidak ada pemisah header/body, return keseluruhan sebagai body
             Ok(("No headers found".to_string(), response_str))
         }
     })
@@ -416,11 +406,9 @@ fn parse_json_response(response_body: &str) -> Result<Value> {
     // Coba parse langsung sebagai JSON
     match serde_json::from_str::<Value>(trimmed) {
         Ok(json) => {
-            // Cek apakah ini JSON valid yang kita harapkan
             if json.get("clientIp").is_some() {
                 return Ok(json);
             } else {
-                // JSON valid tapi tidak ada clientIp field
                 return Err("JSON response doesn't contain clientIp".into());
             }
         },
@@ -443,8 +431,6 @@ fn parse_json_response(response_body: &str) -> Result<Value> {
                     }
                 }
             }
-            
-            // Jika masih gagal, coba decode jika mungkin ada HTML atau content lain
             Err("No valid JSON found in response".into())
         }
     }
@@ -518,14 +504,10 @@ async fn process_proxy_with_session(
                         }
                     }
                 },
-                Err(_) => {
-                    // Silently skip invalid responses
-                }
+                Err(_) => {} // Silently skip invalid responses
             }
         },
-        Err(_) => {
-            // Silently skip failed connections
-        }
+        Err(_) => {} // Silently skip failed connections
     }
 }
 
