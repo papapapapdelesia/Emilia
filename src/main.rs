@@ -17,8 +17,8 @@ const PATH_META: &str = "/meta";
 const PROXY_FILE: &str = "Data/IPPROXY23K.txt";
 const OUTPUT_AZ: &str = "Data/alive.txt";
 const OUTPUT_PRIORITY: &str = "Data/Country-ALIVE.txt";
-const MAX_CONCURRENT: usize = 100;
-const TIMEOUT_SECONDS: u64 = 20;
+const MAX_CONCURRENT: usize = 180;
+const TIMEOUT_SECONDS: u64 = 11;
 const PRIORITY_COUNTRIES: [&str; 4] = ["ID", "MY", "SG", "HK"];
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
@@ -65,7 +65,7 @@ impl CookieJar {
 #[tokio::main]
 async fn main() -> Result<()> {
     println!("==========================================");
-    println!("   CLOUDFLARE PROXY SCANNER v2.0 (Fixed)");
+    println!("   CLOUDFLARE PROXY SCANNER ");
     println!("==========================================");
 
     // Create output directories
@@ -145,7 +145,7 @@ async fn main() -> Result<()> {
                 // Update progress
                 let mut counter_lock = counter.lock().unwrap();
                 counter_lock.0 += 1;
-                if counter_lock.0 % 100 == 0 || counter_lock.0 == counter_lock.1 as u32 {
+                if counter_lock.0 % 1000 == 0 || counter_lock.0 == counter_lock.1 as u32 {
                     println!("  Progress: {}/{} ({:.1}%)", 
                            counter_lock.0, counter_lock.1,
                            (counter_lock.0 as f32 / counter_lock.1 as f32) * 100.0);
