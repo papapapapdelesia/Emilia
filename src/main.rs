@@ -125,13 +125,13 @@ async fn main() -> Result<()> {
 
     // Process proxies concurrently
     let tasks = futures::stream::iter(
-        proxies.into_iter().enumerate().map(|(idx, proxy_line)| {
+        proxies.into_iter().enumerate().map(|(_idx, proxy_line)| {
             let original_ip = original_ip.clone();
             let active_proxies = Arc::clone(&active_proxies);
             let counter = Arc::clone(&counter);
             
             async move {
-                let result = process_proxy_with_session(idx, proxy_line, &original_ip, &active_proxies).await;
+                let result = process_proxy_with_session(proxy_line, &original_ip, &active_proxies).await;
                 
                 // Update progress
                 let mut counter_lock = counter.lock().unwrap();
@@ -322,7 +322,9 @@ async fn make_request(
         } else {
             Err("Invalid HTTP response: No header/body separator found".into())
         }
-    }).await.map_err(|_| "Request timeout".into())?
+    })
+    .await
+    .map_err(|_| Box::<dyn std::error::Error + Send + Sync>::from("Request timeout"))?
 }
 
 fn parse_json_response(response_body: &str) -> Result<Value> {
@@ -361,7 +363,6 @@ fn clean_org_name(org_name: &str) -> String {
 }
 
 async fn process_proxy_with_session(
-    idx: usize,
     proxy_line: String,
     original_ip: &str,
     active_proxies: &Arc<Mutex<Vec<ProxyEntry>>>,
