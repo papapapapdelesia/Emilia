@@ -17,7 +17,7 @@ const PATH_META: &str = "/meta";
 const PROXY_FILE: &str = "Data/IPPROXY23K.txt";
 const OUTPUT_AZ: &str = "Data/alive.txt";
 const OUTPUT_PRIORITY: &str = "Data/Country-ALIVE.txt";
-const MAX_CONCURRENT: usize = 180;
+const MAX_CONCURRENT: usize = 200;
 const TIMEOUT_SECONDS: u64 = 11;
 const PRIORITY_COUNTRIES: [&str; 4] = ["ID", "MY", "SG", "HK"];
 
