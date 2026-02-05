@@ -1,0 +1,66 @@
+# === Dependencies (Node/Bun) ===
+node_modules/
+
+# === Golang (PENTING: Tambahan Baru) ===
+# Binary/App hasil build
+main
+main.exe
+proxy-check
+proxy-check.exe
+*.test
+*.prof
+go.work
+go.work.sum
+vendor/
+
+# === Rust / Cargo ===
+/target/
+/debug/
+/release/
+**/*.rs.bk
+Cargo.lock # Opsional: Hapus pagar jika kamu membuat library, tapi biarkan untuk aplikasi
+
+# === Build Artifacts (General) ===
+out/
+dist/
+*.tgz
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+*.rlib
+*.rmeta
+
+# === Logs & Databases ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.sqlite
+*.db
+
+# === Environment Variables (RAHASIA) ===
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# === Caches ===
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# === IDE / Editor files ===
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
