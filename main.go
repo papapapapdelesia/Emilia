@@ -23,7 +23,7 @@ import (
 const (
 	Debug         = false // false or true
 	TimeoutSec    = 5
-	MaxConcurrent = 150
+	MaxConcurrent = 200
 )
 
 var workerURLs = []string{
@@ -112,8 +112,8 @@ func main() {
 
 	// Progress monitor Aktifkan satu
 	// ticker := time.NewTicker(500 * time.Millisecond)
-	ticker := time.NewTicker(20 * time.Second)
-	// ticker := time.NewTicker(1 * time.Minute)
+	// ticker := time.NewTicker(20 * time.Second)
+	ticker := time.NewTicker(1 * time.Minute)
 	// ticker := time.NewTicker(1 * time.Hour)
 	done := make(chan bool)
 	go progressMonitor(ticker, done, stats)
