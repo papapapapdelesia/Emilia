@@ -37,8 +37,8 @@ const (
 	TraceURL     = "https://1.1.1.1/cdn-cgi/trace"
 	AwsURL       = "https://checkip.amazonaws.com"
 	FileInput    = "Data/IPPROXY23K.txt"
-	FileAlive    = "Data/Alive.txt"
-	FilePriority = "Data/Priority.txt"
+	FileAlive    = "Data/alive.txt"
+	FilePriority = "Data/Country-ALIVE.txt"
 )
 
 var PriorityCountries = map[string]bool{"ID": true, "MY": true, "SG": true, "HK": true}
@@ -112,7 +112,7 @@ func main() {
 
 	// Progress monitor Aktifkan satu
 	// ticker := time.NewTicker(500 * time.Millisecond)
-	ticker := time.NewTicker(10 * time.Second)
+	ticker := time.NewTicker(20 * time.Second)
 	// ticker := time.NewTicker(1 * time.Minute)
 	// ticker := time.NewTicker(1 * time.Hour)
 	done := make(chan bool)
