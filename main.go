@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"proxy-check/uagen"
+	"Emilia/useragent"
 	"regexp"
 	"sort"
 	"strings"
@@ -27,6 +27,7 @@ const (
 )
 
 var workerURLs = []string{
+	"https://api-check4.checkv4.workers.dev",
 	"https://api-check1.api-check1.workers.dev",
 	"https://api-check2.shirokoyumi.workers.dev",
 	"https://api-check3.sokove5110.workers.dev",
@@ -35,7 +36,7 @@ var workerURLs = []string{
 const (
 	TraceURL     = "https://1.1.1.1/cdn-cgi/trace"
 	AwsURL       = "https://checkip.amazonaws.com"
-	FileInput    = "Data/coba.txt"
+	FileInput    = "Data/IPPROXY23K.txt"
 	FileAlive    = "Data/Alive.txt"
 	FilePriority = "Data/Priority.txt"
 )
