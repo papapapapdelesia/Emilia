@@ -1,9 +1,9 @@
-name: 🦦 Golang CF Scanning
+name: Golang CF Scanning
 
 on:
   workflow_dispatch: # Tombol manual untuk menjalankan workflow
-  # schedule:
-  #   - cron: '0 */6 * * *' # Jalan otomatis tiap 6 jam
+  schedule:
+    - cron: '0 */12 * * *' # Jalan otomatis tiap 12 jam
 
 jobs:
   scan-proxies:
@@ -32,4 +32,4 @@ jobs:
         git config --global user.email "actions@github.com"
         git add Data/alive.txt Data/Country-ALIVE.txt
         git commit -m "🔁 Update Proxy: alive.txt & Country-ALIVE.txt" || echo "No changes to commit"
-        git push origin go-check
+        git push origin main
