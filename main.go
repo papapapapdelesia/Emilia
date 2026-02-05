@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"Emilia/useragent"
+	"emilia/useragent"
 	"regexp"
 	"sort"
 	"strings"
@@ -253,7 +253,7 @@ func rawSocketRequest(targetURL, proxyIP, proxyPort string) ([]byte, int) {
 			"User-Agent: %s\r\n"+
 			"Connection: close\r\n"+
 			"\r\n",
-		path, host, uagen.GetRandom(),
+		path, host, useragent.GetRandom(),
 	)
 
 	if _, err := tlsConn.Write([]byte(rawRequest)); err != nil {
