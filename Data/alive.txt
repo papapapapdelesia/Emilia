@@ -1,1 +1,1 @@
-91.90.195.38,443,US,Friendhosting LTD
+141.145.199.188,443,FR,Oracle Corporation
