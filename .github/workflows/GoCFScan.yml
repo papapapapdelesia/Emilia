@@ -3,7 +3,7 @@ name: Golang CF Scanning
 on:
   workflow_dispatch: # Tombol manual untuk menjalankan workflow
   schedule:
-    - cron: '0 */12 * * *' # Jalan otomatis tiap 12 jam
+    - cron: '0 */6 * * *' # Jalan otomatis tiap 6 jam
 
 jobs:
   scan-proxies:
