@@ -102,7 +102,7 @@ func main() {
 	if realIP != "" {
 		fmt.Printf("%s\n\n", realIP)
 	} else {
-		fmt.Println("N/A (skip validation)\n")
+		fmt.Println("N/A (skip validation)")
 	}
 
 	// 2. BACA FILE INPUT
@@ -116,7 +116,7 @@ func main() {
 		fmt.Println("❌ Tidak ada proxy untuk di-scan.")
 		return
 	}
-	fmt.Println("🚀 Memulai scan socket parallel, Mohon tunggu.\n")
+	fmt.Println("🚀 Memulai scan socket parallel, Mohon tunggu.")
 
 	// 3. SCANNING
 	stats := &Stats{Total: int32(len(proxies))}
@@ -476,6 +476,7 @@ func readInputFile(path string) ([]ProxyInput, error) {
 	scanner := bufio.NewScanner(file)
 	lineNum := 0
 
+	seen := make(map[string]bool)
 	for scanner.Scan() {
 		lineNum++
 		line := scanner.Text()
@@ -490,7 +491,9 @@ func readInputFile(path string) ([]ProxyInput, error) {
 			country := strings.TrimSpace(parts[2])
 			org := strings.TrimSpace(parts[3])
 
-			if ip != "" && port != "" && isValidIP(ip) {
+			key := ip + ":" + port
+			if ip != "" && port != "" && isValidIP(ip) && !seen[key] {
+				seen[key] = true
 				proxies = append(proxies, ProxyInput{
 					IP:       ip,
 					Port:     port,
