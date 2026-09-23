@@ -9949,6 +9949,18 @@
 172.232.245.102,443,ID,Linode
 172.232.246.133,8443,ID,Linode
 202.155.95.132,443,ID,PT Deneva
+103.253.213.184, 443, ID, CV. Rumahweb Indonesia
+202.74.74.137, 443,ID, PT Global Port Binekatara
+139.190.97.223, 443, ID, PT Biznet Gio Nusantara
+103.150.192.28, 443, ID, PT Biznet Gio Nusantara
+103.127.132.227, 443, ID, PT Biznet Gio Nusantara
+103.196.155.151, 443, ID, PT Biznet Gio Nusantara
+206.237.97.82, 2053, ID, Herza Cloud
+110.232.84.159, 2053, ID, PT. Media Antar Nusa
+43.229.254.71, 443, ID, PT. Media Antar Nusa
+103.169.206.90, 2053, ID, CV Pajar Utama Sejahtera
+103.169.207.189, 443, ID, CV Pajar Utama Sejahtera
+103.193.179.158, 443, ID, PT Cloud Hosting Indonesia
 36.95.152.58,12137,ID,PT Telekomunikasi Indonesia
 43.169.18.179,443,US,ACE
 43.169.19.179,443,US,ACE
