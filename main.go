@@ -13,6 +13,7 @@ import (
 	"os"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -32,7 +33,8 @@ var workerURLs []string
 const (
 	TraceURL     = "https://1.1.1.1/cdn-cgi/trace"
 	AwsURL       = "https://checkip.amazonaws.com"
-	FileInput    = "Data/proxy-26agustus.txt"
+	FileInput    = "Data/Clean_IPProxy.txt"
+	FileExclude  = "Data/exclude.txt"
 	FileAlive    = "Data/alive.txt"
 	FilePriority = "Data/Country-ALIVE.txt"
 )
@@ -105,13 +107,18 @@ func main() {
 		fmt.Println("N/A (skip validation)")
 	}
 
-	// 2. BACA FILE INPUT
-	proxies, err := readInputFile(FileInput)
+	// 2. BACA FILE INPUT & EXCLUDE/LIMIT
+	countryLimits := loadCountryLimits(FileExclude)
+	if len(countryLimits) > 0 {
+		fmt.Printf("🚫 Excluded/Limited Countries: %d aturan dimuat\n", len(countryLimits))
+	}
+
+	proxies, err := readInputFile(FileInput, countryLimits)
 	if err != nil {
 		fmt.Printf("❌ Error membaca file input: %v\n", err)
 		return
 	}
-	fmt.Printf("📂 Total Proxy Loaded: %d\n", len(proxies))
+	fmt.Printf("📂 Total Proxy Loaded (setelah filter): %d\n", len(proxies))
 	if len(proxies) == 0 {
 		fmt.Println("❌ Tidak ada proxy untuk di-scan.")
 		return
@@ -465,7 +472,41 @@ func cleanOrgName(org string) string {
 	return strings.TrimSpace(cleaned)
 }
 
-func readInputFile(path string) ([]ProxyInput, error) {
+func loadCountryLimits(path string) map[string]int {
+	limits := make(map[string]int)
+	file, err := os.Open(path)
+	if err != nil {
+		return limits
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+
+		parts := strings.Split(line, ",")
+		code := normalizeCountry(parts[0])
+		if code == "" {
+			continue
+		}
+
+		// Jika cuma "UK" -> limit = 0 (blokir total)
+		// Jika "UK, 10" -> limit = 10
+		maxLimit := 0
+		if len(parts) >= 2 {
+			if parsed, err := strconv.Atoi(strings.TrimSpace(parts[1])); err == nil {
+				maxLimit = parsed
+			}
+		}
+		limits[code] = maxLimit
+	}
+	return limits
+}
+
+func readInputFile(path string, countryLimits map[string]int) ([]ProxyInput, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, fmt.Errorf("gagal membuka file: %v", err)
@@ -477,6 +518,8 @@ func readInputFile(path string) ([]ProxyInput, error) {
 	lineNum := 0
 
 	seen := make(map[string]bool)
+	countryCount := make(map[string]int)
+
 	for scanner.Scan() {
 		lineNum++
 		line := scanner.Text()
@@ -488,12 +531,19 @@ func readInputFile(path string) ([]ProxyInput, error) {
 		if len(parts) >= 4 {
 			ip := strings.TrimSpace(parts[0])
 			port := strings.TrimSpace(parts[1])
-			country := strings.TrimSpace(parts[2])
+			country := normalizeCountry(parts[2])
 			org := strings.TrimSpace(parts[3])
+
+			if limit, exists := countryLimits[country]; exists {
+				if limit <= 0 || countryCount[country] >= limit {
+					continue
+				}
+			}
 
 			key := ip + ":" + port
 			if ip != "" && port != "" && isValidIP(ip) && !seen[key] {
 				seen[key] = true
+				countryCount[country]++
 				proxies = append(proxies, ProxyInput{
 					IP:       ip,
 					Port:     port,
