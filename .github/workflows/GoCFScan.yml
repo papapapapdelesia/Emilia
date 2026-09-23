@@ -42,6 +42,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add Data/alive.txt Data/Country-ALIVE.txt Data/proxy-26agustus.txt
+          git add Data/alive.txt Data/Country-ALIVE.txt Data/Clean_IPProxy.txt
           git commit -m "🐯 Update Proxy: alive.txt & Country-ALIVE.txt" || echo "No changes to commit"
           git push origin main
