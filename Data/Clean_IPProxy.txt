@@ -26613,3 +26613,6 @@
 213.108.3.35,2053,US,Baykov Ilya Sergeevich
 45.59.184.18,443,US,DMIT Cloud Services
 50.114.74.39,443,US,Baxet Group Inc
+217.60.245.141,8443,DE,Awasovh  Germany Frankfurt
+169.40.3.92,443,LV,SIA VEESP
+91.242.163.143,443,SK,PE Denis Podolskii
