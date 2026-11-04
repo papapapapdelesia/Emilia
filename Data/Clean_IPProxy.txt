@@ -34014,3 +34014,4 @@
 185.232.204.31,443,FI,Individual Entrepreneur Anton Levin
 77.91.78.250,443,FI,nuxtcloud hosting provider
 167.179.86.6,8443,JP,Vultr Holdings LLC
+216.173.69.143,443,LV,SIA VEESP
