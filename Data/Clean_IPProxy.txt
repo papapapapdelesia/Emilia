@@ -34015,3 +34015,5 @@
 77.91.78.250,443,FI,nuxtcloud hosting provider
 167.179.86.6,8443,JP,Vultr Holdings LLC
 216.173.69.143,443,LV,SIA VEESP
+116.202.187.197,8443,DE,Hetzner Online GmbH
+172.232.206.9,443,IT,Linode
