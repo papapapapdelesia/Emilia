@@ -34038,3 +34038,6 @@
 89.58.57.45,443,DE,netcup GmbH
 94.159.112.145,443,FI,New Hosting Technologies LLC
 62.60.238.62,443,NL,AEZA GROUP LLC
+94.177.8.10,443,AT,Alwyzon a trading name of Hohl IT eU
+87.251.87.111,443,DE,nuxtcloud
+45.12.68.48,443,FI,FIlandvps
