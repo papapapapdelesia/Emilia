@@ -34041,3 +34041,5 @@
 94.177.8.10,443,AT,Alwyzon a trading name of Hohl IT eU
 87.251.87.111,443,DE,nuxtcloud
 45.12.68.48,443,FI,FIlandvps
+176.65.151.220,2083,NL,Pfcloud UG haftungsbeschrankt
+198.105.123.86,8443,TR,YottaSrc Hosting and Cloud Service
